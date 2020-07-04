@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .overflow-hidden{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .overflow-scroll{
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            overflow: scroll;
+            border: 5px solid green;
+        }
+        .game{
+            text-align: center;
+            border: 2px solid slateblue;
+            margin: 5% 10%;
+            padding-bottom: 10%;
+            height: 700px;
+        }
+        .game h1{
+            padding-right: 20px;
+        }
+        .float{
+            float: left;
+        }
+        .busket{
+            margin-top: 200px;
+            width: 250px;
+            height: 250px;
+        }
+        .busket img{
+            width: 250px;
+            height: 250px;
+        }
+        .tennis-ball{
+            position: relative;
+            top: 100px;
+            left: 470px;
+            width: 70px;
+            height: 70px;
+
+        }
+        .tennis-ball img{
+            width: 70px;
+            height: 70px;
+        }
+        .ball{
+            transition: transform 1s ease-in 0.5s;
+        }
+        .play:hover .ball{
+            transform: translate(-600px, 80px)
+        }
+        .tennis-bat img{
+            width: 450px;
+            height: 450px;
+        }
+        .tennis-bat{
+            position: relative;
+            bottom: 180px;
+            left: -10px;
+        }
+        .tennis-bat img{
+            transition: transform 0.5s ease-in;
+        }
+        .tennis-bat img:hover{
+            transform: rotate(-53deg);
+        }
+        .animation-sec{
+            height: 500px;
+        }
+        .animation {
+            padding-top: 40px;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+}
+
+        @keyframes example {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+        .box-flex{
+            text-align: center;
+            width: 250px;
+            height: 250px;
+            font-size: 40px;
+            border: 3px solid skyblue;
+            margin-bottom: 50px;
+        }
+        .container-2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .box-flex2{
+            text-align: center;
+            width: 250px;
+            height: 200px;
+            margin-bottom: 50px;
+            font-size: 40px;
+            border: 3px solid rgb(23, 233, 23);
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+            margin-bottom: 50px;
+        }
+        .boxes{
+            border: 3px solid purple;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: repeat(7,1fr);
+            grid-gap: 15px;
+          
+        }
+        li{ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px 0;
+            list-style-type: none;
+            font-size: 3rem;
+            background-color: violet;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3</title>
+</head>
+<body>
+    <!-- overflow lecture -->
+    <section>
+        <div class="overflow-hidden">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia voluptatum aut repellat itaque architecto. Temporibus, debitis! Exercitationem ad corrupti, cumque, non id, vero laudantium dolores quaerat sapiente sequi delectus voluptates iure eveniet praesentium. Veniam repellat minima quia earum iusto maxime ipsam at similique nisi? Voluptatibus deleniti nostrum corporis. Pariatur, porro.</p>
+
+        </div>
+        <div class="overflow-scroll">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos voluptates delectus eius obcaecati architecto! Laborum itaque fuga est facilis asperiores doloribus, officiis nesciunt animi dolorem dolor voluptatibus soluta nam. Similique, quod commodi! Aut iusto numquam animi nisi, quod est amet nesciunt exercitationem sequi eveniet quae incidunt, labore molestiae, autem ab.</p>
+
+        </div>
+    </section>
+
+    <!-- png svg image optimization lecture -->
+    <section>
+        <div class="png">
+            <img src="images/profile.png" alt="">
+
+        </div>
+        <div class="svg">
+            <img src="images/Android.svg" alt="">
+
+        </div>
+        <br><br><br>
+    </section>
+
+    <!-- trasition & transformation game -->
+    
+    <section class="game">
+        <h1>To play the game hover on the tennis bat</h1>
+        <div class="float busket">
+            <img src="images/29200-1.jpg" alt="">
+
+        </div>
+        <div class="float tennis-ball play">
+            <img class="ball" src="images/download.jpg" alt="">
+
+        </div">
+        <div class="float tennis-bat play">
+            <img class="bat" src="images/bat.jpg" alt="">
+
+        </div>
+    </section>
+
+    <!-- animation -->
+    <section class="animation-sec">
+        <div class="animation">
+            <h1>WOW</h1>
+
+        </div>
+
+    </section>
+
+    <!-- flexbox -->
+    <section>
+        <div class="container">
+            <div class="box-flex">
+                <h1>box 1</h1>
+            </div>
+            <div class="box-flex">
+                <h1>box 1</h1>
+            </div>
+            <div class="box-flex">
+                <h1>box 1</h1>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="box-flex2">
+                <h1>box 2</h1>
+            </div>
+            <div class="box-flex2">
+                <h1>box 2</h1>
+            </div>
+            <div class="box-flex2">
+                <h1>box 2</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- grid in css -->
+    <section>
+        <div class="grid">
+            <div class="boxes">1</div>
+            <div class="boxes">2</div>
+            <div class="boxes">3</div>
+            <div class="boxes">4</div>
+            <div class="boxes">5</div>
+            <div class="boxes">6</div>
+            <div class="boxes">7</div>
+            <div class="boxes">8</div>
+            <div class="boxes">9</div>
+            <div class="boxes">10</div>
+            <div class="boxes">11</div>
+            <div class="boxes">12</div>
+        </div>
+
+        <div class="calendar">
+            <ul>
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li>14</li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li>20</li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+    </section>
+    
+
+
+
+</body>
+</html>
